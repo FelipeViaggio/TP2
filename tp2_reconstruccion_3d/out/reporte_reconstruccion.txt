@@ -6,7 +6,7 @@ DATASET
 ----------------------------------------------------------------------
 Dataset: stereo_budha_charuco
 Total de pares disponibles: 21
-Pares procesados: 20
+Pares procesados: 21
 
 CALIBRACIÓN ESTÉREO
 ----------------------------------------------------------------------
@@ -23,15 +23,15 @@ Marcadores: 31.3 mm
 
 DETECCIÓN Y POSE
 ----------------------------------------------------------------------
-Pares con pose válida: 20
+Pares con pose válida: 21
 Pares fallidos: 0
 
 RECONSTRUCCIÓN
 ----------------------------------------------------------------------
-Pares procesados: 20
+Pares procesados: 21
 Pares saltados: 0
-Puntos antes de filtros: 6373923
-Puntos después de filtros: 422547
+Puntos antes de filtros: 6735887
+Puntos después de filtros: 429433
 
 DIMENSIONES DEL OBJETO
 ----------------------------------------------------------------------
@@ -41,8 +41,8 @@ Alto (Z):   280.13 mm
 
 MALLA 3D
 ----------------------------------------------------------------------
-Vértices: 674344
-Triángulos: 1345245
+Vértices: 97269
+Triángulos: 192707
 
 ARCHIVOS GENERADOS
 ----------------------------------------------------------------------
