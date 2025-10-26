@@ -271,3 +271,40 @@ def detect_and_estimate_pose(image_path, board, K, dist, min_markers=4):
         'T_world_cam': T_world_cam,
         'T_cam_world': T_cam_world
     }
+
+def outliers_filter(cloud, nb_neighbors=30, std_ratio=2.5):
+    """
+    Aplica filtros para remover outliers de una nube de puntos.
+    Args:
+        pcd (o3d.geometry.PointCloud): Nube de puntos original.
+        nb_neighbors (int): Número de vecinos a considerar.
+        std_ratio (float): Ratio de desviación estándar para el filtro estadístico.
+    Returns:
+        pcd_clean (o3d.geometry.PointCloud): Nube de puntos limpia.
+        ind (list): Índices de los puntos conservados.
+        removed_outliers (o3d.geometry.PointCloud): Nube de puntos removidos como outliers.
+    """
+    # Filtro estadístico
+    pcd_clean, ind = cloud.remove_statistical_outlier(
+        nb_neighbors=nb_neighbors,
+        std_ratio=std_ratio
+    )
+
+    removed_outliers = len(cloud.points) - len(pcd_clean.points)
+    
+    return pcd_clean, ind, removed_outliers
+
+def voxel_filter(cloud, voxel_size=0.0015):
+    """
+    Aplica un filtro de voxel downsampling a una nube de puntos.
+    Args:
+        pcd (o3d.geometry.PointCloud): Nube de puntos original.
+        voxel_size (float): Tamaño del voxel para el downsampling.
+    Returns:
+        pcd_downsampled (o3d.geometry.PointCloud): Nube de puntos downsampleada.
+    """
+    pcd_downsampled = cloud.voxel_down_sample(voxel_size=voxel_size)
+
+    removed_voxel = len(cloud.points) - len(pcd_downsampled.points)
+    
+    return pcd_downsampled, removed_voxel
