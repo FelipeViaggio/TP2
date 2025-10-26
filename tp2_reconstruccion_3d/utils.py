@@ -280,19 +280,19 @@ def outliers_filter(cloud, nb_neighbors=30, std_ratio=2.5):
         nb_neighbors (int): Número de vecinos a considerar.
         std_ratio (float): Ratio de desviación estándar para el filtro estadístico.
     Returns:
-        pcd_clean (o3d.geometry.PointCloud): Nube de puntos limpia.
+        cloud (o3d.geometry.PointCloud): Nube de puntos limpia.
         ind (list): Índices de los puntos conservados.
         removed_outliers (o3d.geometry.PointCloud): Nube de puntos removidos como outliers.
     """
     # Filtro estadístico
-    pcd_clean, ind = cloud.remove_statistical_outlier(
+    cloud, ind = cloud.remove_statistical_outlier(
         nb_neighbors=nb_neighbors,
         std_ratio=std_ratio
     )
 
-    removed_outliers = len(cloud.points) - len(pcd_clean.points)
+    removed_outliers = len(cloud.points) - len(cloud.points)
     
-    return pcd_clean, ind, removed_outliers
+    return cloud, ind, removed_outliers
 
 def voxel_filter(cloud, voxel_size=0.0015):
     """
