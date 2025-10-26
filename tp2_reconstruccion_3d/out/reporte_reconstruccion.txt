@@ -1,0 +1,53 @@
+======================================================================
+REPORTE DE RECONSTRUCCIÓN 3D - TP2 VISIÓN ARTIFICIAL
+======================================================================
+
+DATASET
+----------------------------------------------------------------------
+Dataset: stereo_budha_charuco
+Total de pares disponibles: 21
+Pares procesados: 20
+
+CALIBRACIÓN ESTÉREO
+----------------------------------------------------------------------
+Resolución: 1920 x 1080
+Baseline: 59.99 mm
+Focal length (fx): 602.41 px
+Centro óptico (cx, cy): (952.03, 538.38) px
+
+CHARUCO BOARD
+----------------------------------------------------------------------
+Tamaño: 5x7
+Cuadrados: 52.6 mm
+Marcadores: 31.3 mm
+
+DETECCIÓN Y POSE
+----------------------------------------------------------------------
+Pares con pose válida: 20
+Pares fallidos: 0
+
+RECONSTRUCCIÓN
+----------------------------------------------------------------------
+Pares procesados: 20
+Pares saltados: 0
+Puntos antes de filtros: 6373923
+Puntos después de filtros: 422547
+
+DIMENSIONES DEL OBJETO
+----------------------------------------------------------------------
+Ancho (X):  249.99 mm
+Profundidad (Y): 449.98 mm
+Alto (Z):   280.13 mm
+
+MALLA 3D
+----------------------------------------------------------------------
+Vértices: 674344
+Triángulos: 1345245
+
+ARCHIVOS GENERADOS
+----------------------------------------------------------------------
+Nube de puntos: buda_reconstruccion_final.ply
+Malla 3D: buda_malla_final.ply
+Reporte: reporte_reconstruccion.txt
+
+======================================================================
