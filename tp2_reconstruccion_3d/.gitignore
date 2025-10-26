@@ -1,0 +1,8 @@
+Ignora todos los archivos .npz
+echo "*.npz" >> .gitignore
+
+(Opcional, pero recomendado) Ignora toda la carpeta de salida
+echo "tp2_reconstruccion_3d/out/" >> .gitignore
+Agrega este nuevo archivo .gitignore a git
+git add .gitignore
+git commit -m "Añadir .gitignore para ignorar archivos cache"
